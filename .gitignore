@@ -1,1 +1,16 @@
-node_modules
+# Bağımlılıklar
+node_modules/
+
+# Yüklenen dosyalar (kullanıcı PDF/DOCX'leri) — uygulama çalışınca yeniden oluşturulur
+services/tez/uploads/
+
+# Eski SQLite kalıntıları (artık MSSQL LocalDB kullanılıyor)
+**/db/*.db
+
+# Geçici tanılama dosyaları
+_diag_*.js
+_extracted.js
+
+# OS / editör
+Thumbs.db
+.DS_Store

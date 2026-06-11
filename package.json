@@ -1,12 +1,15 @@
 {
   "name": "ybs-tez",
   "version": "1.0.0",
-  "description": "",
+  "description": "YBS Tez Yönetim Sistemi — SOA tabanlı, 5 mikroservisli tez platformu (Node.js + MSSQL LocalDB)",
   "main": "start.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node start.js",
+    "check-db": "node check-db.js",
+    "repair-db": "node repair-db.js",
+    "reset-db": "node reset-db.js"
   },
-  "keywords": [],
+  "keywords": ["soa", "microservices", "mssql", "thesis", "ybs"],
   "author": "",
   "license": "ISC",
   "type": "commonjs",

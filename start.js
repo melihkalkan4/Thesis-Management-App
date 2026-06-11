@@ -12,10 +12,11 @@ const services = [
 console.log('Starting YBS Tez Portal services...\n');
 
 services.forEach(({ name, cwd }) => {
-  const proc = spawn('node', ['index.js'], {
+  // process.execPath = çalışan node binary'sinin tam yolu. shell:true kullanmadan
+  // doğrudan çağırmak DEP0190 uyarısını önler ve platformlar arası daha güvenlidir.
+  const proc = spawn(process.execPath, ['index.js'], {
     cwd: path.join(__dirname, cwd),
     stdio: 'inherit',
-    shell: true,
   });
 
   proc.on('error', (err) => {
